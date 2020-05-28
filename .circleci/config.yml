@@ -19,22 +19,28 @@ jobs:
     steps:
       - checkout
       - run: echo "build"
+      - slack/notify-on-failure:
+        webhook: '${SLACK_WEBHOOK}'
   job_2:
     docker:
       - image: circleci/node
     steps:
       - checkout
       - run: echo "job_2"
+      - slack/notify-on-failure:
+        webhook: '${SLACK_WEBHOOK}'
   job_3:
     docker:
       - image: circleci/node    
     steps:
       - checkout
       - run: echo "job_3"
-      - slack/notify-on-failure:
-        # fail_only: true
-        # message: 'hello from slack'
-        webhook: '${SLACK_WEBHOOK}'
+      - slack/status:
+            fail_only: true
+        # failure_message: "failed job"
+            webhook: '${SLACK_WEBHOOK}'
+            
+  
       
      
 workflows:
