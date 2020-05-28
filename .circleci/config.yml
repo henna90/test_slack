@@ -1,0 +1,51 @@
+version: 2.1
+orbs:
+    slack: circleci/slack@@3.4.2
+
+
+commands:
+    slack_notification : 
+        steps:
+            - slack/notify:
+                fail_only: true
+                message: 'hello from slack'
+                webhook: 'https://hooks.slack.com/services/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'
+     
+jobs:
+  job_1:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - run: echo "build"
+  job_2:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - run: echo "job_2"
+  job_3:
+    docker:
+      - image: circleci/node    
+    steps:
+      - checkout
+      - run: echo "job_3"
+      - slack_notification
+    #   - slack/notify:
+    #     fail_only: true
+    #     message: 'hello from slack'
+    #     webhook: 'https://hooks.slack.com/services/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'
+      
+     
+workflows:
+  first_workflow:
+    jobs:
+      - job_1
+      - job_2
+        #   requires:
+        #     - job_1
+  second_workflow:
+    jobs:
+      - job_1
+      - job_2
+      - job_3
