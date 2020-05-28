@@ -6,10 +6,11 @@ orbs:
 commands:
     slack_notification : 
         steps:
-            - slack/notify:
-                fail_only: true
-                message: 'hello from slack'
-                webhook: 'https://hooks.slack.com/services/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'
+            # - slack/notify:
+            #     fail_only: true
+            #     message: 'hello from slack'
+            #     webhook: 'https://hooks.slack.com/services/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'
+            - run: echo "slack orb"
      
 jobs:
   job_1:
