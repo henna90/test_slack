@@ -31,8 +31,8 @@ jobs:
     steps:
       - checkout
       - run: echo "job_3"
-      - slack/status:
-        fail_only: true
+      - slack/notify-on-failure:
+        # fail_only: true
         # message: 'hello from slack'
         webhook: '${SLACK_WEBHOOK}'
       
