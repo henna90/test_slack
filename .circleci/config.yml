@@ -36,7 +36,7 @@ jobs:
       - checkout
       - run: echo "job_3"
       - slack/status:
-            fail_only: true
+            # fail_only: true
         # failure_message: "failed job"
             webhook: '${SLACK_WEBHOOK}'
             
