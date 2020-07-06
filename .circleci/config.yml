@@ -51,7 +51,8 @@ workflows:
         #   requires:
         #     - job_1
   second_workflow:
+    when: always
     jobs:
       - job_1
-      - job_2
-      - job_3
+#       - job_2
+#       - job_3
