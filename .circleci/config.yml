@@ -19,7 +19,6 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-      - hello/hello-build
       - run: echo "build"
       - slack/notify-on-failure:
         webhook: '${SLACK_WEBHOOK}'
@@ -48,6 +47,7 @@ jobs:
 workflows:
   first_workflow:
     jobs:
+      - hello/hello-build
       - job_1
       - job_2
         #   requires:
