@@ -51,7 +51,7 @@ workflows:
         #   requires:
         #     - job_1
   second_workflow:
-    when: always
+    when: on_fail
     jobs:
       - job_1
 #       - job_2
