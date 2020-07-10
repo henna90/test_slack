@@ -48,8 +48,8 @@ workflows:
   first_workflow:
     jobs:
       - hello/hello-build
-      - job_1:
-            when: on_fail
+      - job_1
+#             when: on_fail
       - job_2
         #   requires:
         #     - job_1
