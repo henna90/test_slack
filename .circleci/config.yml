@@ -19,9 +19,10 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-#       - hello/hello-build
+      - hello/circleci-env-highlights
+      - hello/hello-triggerer
       - run: echo "build"
-      - slack/notify-on-failure:
+      - slack/notify:
         webhook: '${SLACK_WEBHOOK}'
   job_2:
     docker:
@@ -48,9 +49,7 @@ jobs:
 workflows:
   first_workflow:
     jobs:
-      - hello/hello-build:
-            slack/notify:
-                webhook: '${SLACK_WEBHOOK}'
+#       - hello/hello-build
       - job_1
 #             when: on_fail
       - job_2
