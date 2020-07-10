@@ -53,8 +53,8 @@ workflows:
       - job_1
 #             when: on_fail
       - job_2
-          requires:
-            - job_1
+#           requires:
+#             - job_1
 #   second_workflow:
 #     when: on_fail
 #     jobs:
