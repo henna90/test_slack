@@ -12,12 +12,12 @@ jobs:
       - hello/hello-triggerer
 #       - slack/notify:
 #         webhook: '${SLACK_WEBHOOK}'
-    - slack/status:
-        success_message: 🎉 A $CIRCLE_JOB job has succeeded!
-        failure_message: 🔴 A $CIRCLE_JOB job has failed!
-        fail_only: false
-        webhook: '${SLACK_WEBHOOK}'
-        only_for_branches: master   
+      - slack/status:
+            success_message: 🎉 A $CIRCLE_JOB job has succeeded!
+            failure_message: 🔴 A $CIRCLE_JOB job has failed!
+            fail_only: false
+            webhook: '${SLACK_WEBHOOK}'
+            only_for_branches: master   
 workflows:
   my_workflow:
     jobs:
