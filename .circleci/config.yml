@@ -13,12 +13,12 @@ jobs:
 #       - slack/notify:
 #         webhook: '${SLACK_WEBHOOK}'
       - slack/status:
-            success_message: 🎉 A $CIRCLE_JOB job has succeeded!
+            success_message: 🎉 A $CIRCLE_JOB job has succeeded!.... without quotes are channel name
             failure_message: 🔴 A $CIRCLE_JOB job has failed!
             fail_only: false
             webhook: https://hooks.slack.com/services/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
             only_for_branches: master   
-            channel : 'test-app'
+            channel : test-app
 workflows:
   my_workflow:
     jobs:
