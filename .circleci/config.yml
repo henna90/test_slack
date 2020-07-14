@@ -18,7 +18,7 @@ jobs:
             fail_only: false
             webhook: https://hooks.slack.com/services/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
             only_for_branches: master   
-            channel : test-app
+            channel : 'test-app'
 workflows:
   my_workflow:
     jobs:
