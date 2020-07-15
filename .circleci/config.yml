@@ -12,7 +12,7 @@ jobs:
       - hello/hello-triggerer
 #       - slack/notify:
 #         webhook: '${SLACK_WEBHOOK}'
-#       - slack/status:
+      - slack/status:
 #             success_message: 🎉 A $CIRCLE_JOB job has succeeded!.... without quotes are channel name...$CIRCLE_USERNAME
             success_message: 🎉 $CIRCLE_USERNAME GIT commit $CIRCLE_SHA1 checked into Branch $CIRCLE_BRANCH has succeeded with $CIRCLE_JOB job !!
             failure_message: 🔴 A $CIRCLE_JOB job has failed!
