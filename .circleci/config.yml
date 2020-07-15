@@ -14,7 +14,7 @@ jobs:
 #         webhook: '${SLACK_WEBHOOK}'
       - slack/status:
 #             success_message: 🎉 A $CIRCLE_JOB job has succeeded!.... without quotes are channel name...$CIRCLE_USERNAME
-            success_message: 🎉 @$Name $CIRCLE_USERNAME GIT commit $CIRCLE_SHA1 checked into Branch $CIRCLE_BRANCH has succeeded with $CIRCLE_JOB job !!
+            success_message: 🎉 @$name $CIRCLE_USERNAME GIT commit $CIRCLE_SHA1 checked into Branch $CIRCLE_BRANCH has succeeded with $CIRCLE_JOB job.... $name , $NAME !!
             failure_message: 🔴 A $CIRCLE_JOB job has failed!
             fail_only: false
             webhook: https://hooks.slack.com/services/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
