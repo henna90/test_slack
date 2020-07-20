@@ -9,11 +9,12 @@ jobs:
     steps:
       - checkout
       - hello/circleci-env-highlights
-      - hello/hello-triggerer
+      - hello/hello-triggerer:
+            when: always
 #       - slack/notify:
 #         webhook: '${SLACK_WEBHOOK}'
       - slack/status:
-            when: always
+#             when: always
 #             success_message: 🎉 A $CIRCLE_JOB job has succeeded!.... without quotes are channel name...$CIRCLE_USERNAME
             success_message: 🎉 @$name $CIRCLE_USERNAME GIT commit $CIRCLE_SHA1 checked into Branch $CIRCLE_BRANCH has succeeded with $CIRCLE_JOB job.... $CIRCLE_BUILD_URL
             failure_message: 🔴 A $CIRCLE_JOB job has failed!
