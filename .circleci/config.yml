@@ -9,8 +9,12 @@ jobs:
     steps:
       - checkout
       - hello/circleci-env-highlights
-      - hello/hello-triggerer:
+      - hello/hello-triggerer
+      - run:
+            name: Upload CodeCov.io Data
+            command: bash <(curl -s https://codecov.io/bash) -F unittests
             when: always
+
 #       - slack/notify:
 #         webhook: '${SLACK_WEBHOOK}'
       - slack/status:
