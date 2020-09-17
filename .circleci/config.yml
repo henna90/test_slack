@@ -32,7 +32,7 @@ workflows:
   my_workflow:
     jobs:
       - my_job
-      
- # test
- #test
+      - slack/approval-notification:
+          message: Pending approval
+          webhook: $SLACK_WEBHOOK
 
