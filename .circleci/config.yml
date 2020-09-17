@@ -12,9 +12,7 @@ jobs:
       - hello/hello-triggerer
       - run:
             name: Upload CodeCov.io Data
-            command: slack/status:
-                success_message: 🎉 @$name $CIRCLE_USERNAME GIT commit $CIRCLE_SHA1 checked into Branch $CIRCLE_BRANCH has succeeded with $CIRCLE_JOB job.... $CIRCLE_BUILD_URL
-                webhook: https://hooks.slack.com/services/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
+            command: bash <(curl -s https://codecov.io/bash) -F unittests
             when: always
 
 #       - slack/notify:
