@@ -94,7 +94,7 @@ jobs:
             success_message: 🎉 $CIRCLE_USERNAME GIT commit $CIRCLE_SHA1 checked into Branch $CIRCLE_BRANCH has succeeded with $CIRCLE_JOB job.... $CIRCLE_BUILD_URL
             failure_message: 🔴 A $CIRCLE_JOB job has failed!
             fail_only: false
-            webhook: https://hooks.slack.com/services/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
+            webhook: $SLACK_WEBHOOK
             only_for_branches: master   
             channel : test-app
 workflows:
