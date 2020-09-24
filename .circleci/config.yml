@@ -59,7 +59,7 @@ jobs:
 #             when: always
 #             success_message: 🎉 A $CIRCLE_JOB job has succeeded!.... without quotes are channel name...$CIRCLE_USERNAME
 # `Success:` $CIRCLE_BUILD_URL $CIRCLE_JOB `ran on` $CIRCLE_BRANCH. `Author` : $CIRCLE_PROJECT_USERNAME
-            success_message: 🎉 $CIRCLE_BUILD_URL Job:  $CIRCLE_JOB ran on $CIRCLE_BRANCH. Author:  $CIRCLE_PROJECT_USERNAME
+            success_message: 🎉 Job:  $CIRCLE_JOB ran on $CIRCLE_BRANCH. Author:  $CIRCLE_PROJECT_USERNAME
             failure_message: 🔴 A $CIRCLE_JOB job has failed!
             fail_only: false
             webhook: https://hooks.slack.com/services/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
