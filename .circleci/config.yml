@@ -89,7 +89,7 @@ jobs:
 #       - slack/notify:
 #         webhook: '${SLACK_WEBHOOK}'
       - slack/status:
-            success_message: Success!
+            success_message: Success! $CIRCLE_BUILD_URL $CIRCLE_JOB ran on $CIRCLE_BRANCH Author- $CIRCLE_PROJECT_USERNAME
             failure_message: 🔴 A $CIRCLE_JOB job has failed!
             fail_only: false
             webhook: $SLACK_WEBHOOK
