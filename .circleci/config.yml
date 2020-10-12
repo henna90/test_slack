@@ -16,7 +16,8 @@ jobs:
 #             only_for_branches: master   
 #             channel : test-app
       - slack/notify:
-          template: 'failed'    
+          template: 'failed'
+          event: fail
           mentions: "@henna"
           
             
