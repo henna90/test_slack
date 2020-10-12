@@ -19,6 +19,7 @@ jobs:
           template: basic_fail_1
           event: always
           mentions: '@henna'
+          channel: 'p1602522571001200'
 
             
 workflows:
