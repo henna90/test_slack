@@ -30,6 +30,6 @@ workflows:
           requires: 
             - my_job
       - my_on_hold_job: 
-            type: approval
-            requires: 
-                - slack/on-hold
+          type: approval
+          requires: 
+            - slack/on-hold
