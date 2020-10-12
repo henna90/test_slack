@@ -18,7 +18,7 @@ jobs:
       - slack/notify:
 #           event: fail
           template: 'failed'
-          mentions: "@engineers"
+          mentions: "@henna"
           
             
 workflows:
