@@ -27,5 +27,7 @@ workflows:
       - slack/approval-notification:
           message: Pending approval
           webhook: $SLACK_WEBHOOK
+          requires: 
+            - my_job
       - my_on_hold_job: 
             type: approval
