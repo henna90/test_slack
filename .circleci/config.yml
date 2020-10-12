@@ -15,6 +15,11 @@ jobs:
             webhook: $SLACK_WEBHOOK
             only_for_branches: master   
             channel : test-app
+  my_on_hold_job:
+    docker:
+      - image: circleci/node
+    steps:
+      - run: echo "My on-hold job"               
 workflows:
   my_workflow:
     jobs:
@@ -22,3 +27,5 @@ workflows:
       - slack/approval-notification:
           message: Pending approval
           webhook: $SLACK_WEBHOOK
+      - my_on_hold_job: 
+            type: approval
