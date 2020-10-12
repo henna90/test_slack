@@ -16,10 +16,10 @@ jobs:
 #             only_for_branches: master   
 #             channel : test-app
       - slack/notify:
-          template: 'basic_fail_1'
+          template: basic_fail_1
           event: always
           mentions: '@henna'
-          
+
             
 workflows:
   my_workflow:
