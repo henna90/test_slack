@@ -17,8 +17,9 @@ jobs:
 #             channel : test-app
       - slack/notify:
 #           event: fail
-          template: basic_fail_1
+          template: 'failed'
           mentions: "@engineers"
+          
             
 workflows:
   my_workflow:
