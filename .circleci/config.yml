@@ -17,7 +17,7 @@ jobs:
 #             channel : test-app
       - slack/notify:
 #           event: fail
-          template: 'failed'
+#           template: 'failed'
           mentions: "@henna"
           
             
