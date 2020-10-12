@@ -16,7 +16,7 @@ jobs:
 #             only_for_branches: master   
 #             channel : test-app
       - slack/notify:
-          event: fail
+#           event: fail
           template: basic_fail_1
           mentions: "@engineers"
             
