@@ -21,6 +21,10 @@ workflows:
       - my_job:  
           context:
             - SLACK_SECRETS
+      - slack/on-hold:  
+          context:
+            - SLACK_SECRETS            
+            
 
 
      
