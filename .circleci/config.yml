@@ -43,7 +43,9 @@ workflows:
             - SLACK_SECRETS          
           filters:
             branches:
-              only: test            
+              only: test         
+              
+              #test
 
      
 
