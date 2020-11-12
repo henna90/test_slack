@@ -35,13 +35,13 @@ workflows:
       - my_job:  
           context:
             - SLACK_SECRETS
-      - slack/on-hold:
-          name: Notify Approval
-          context:
-            - SLACK_SECRETS          
-          filters:
-            branches:
-              only: test         
+#       - slack/on-hold:
+#           name: Notify Approval
+#           context:
+#             - SLACK_SECRETS          
+#           filters:
+#             branches:
+#               only: test         
               
               #test
               
