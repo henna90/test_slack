@@ -20,7 +20,7 @@ jobs:
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "Failed: $CIRCLE_USERNAME 's workflow <$CIRCLE_BUILD_URL|$CIRCLE_STAGE> in \n<$CIRCLE_PROJECT_USERNAME|$CIRCLE_PROJECT_REPONAME> \n(<$CIRCLE_SHA1|$CIRCLE_SHA1>) This message contains a URL http://foo.com/\nSo does this one: www.foo.com\nThis message contains a URL <http://foo.com/>\n<http://www.foo.com|This message *is* a link>\n<mailto:bob@example.com|Email Bob Roberts>"
+                            "text": "Failed: $CIRCLE_USERNAME 's workflow <$CIRCLE_BUILD_URL|$CIRCLE_STAGE> in \n<https://app.circleci.com/pipelines/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME|$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME> \n(<$CIRCLE_SHA1|$CIRCLE_SHA1>) This message contains a URL http://foo.com/\nSo does this one: www.foo.com\nThis message contains a URL <http://foo.com/>\n<http://www.foo.com|This message *is* a link>\n<mailto:bob@example.com|Email Bob Roberts>"
                         }
                     }
                 ]
