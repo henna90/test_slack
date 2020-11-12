@@ -20,7 +20,7 @@ jobs:
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "Failed: $CIRCLE_USERNAME's build in \n<https://app.circleci.com/pipelines/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME|$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME> \n" 
+                            "text": "Failed: $CIRCLE_USERNAME's build of \n<https://app.circleci.com/pipelines/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME|$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME> \n" 
                         }
                     }
                 ]
