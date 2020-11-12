@@ -14,20 +14,20 @@ jobs:
           event: always
           mentions: '@henna'
           custom: |
-        
-
-
-{
-	"blocks": [
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "This message contains a URL $CIRCLE_BUILD_URL\nSo does this one: $CIRCLE_BUILD_URL\nThis message contains a URL <$CIRCLE_BUILD_URL>\n<http://www.foo.com|This message *is* a link>\n<mailto:bob@example.com|Email Bob Roberts>"
-			}
-		}
-	]
-}
+              {
+                "blocks": [
+                  {
+                    "type": "section",
+                    "fields": [
+                      {
+                        "type": "mrkdwn",
+                        "text": "This message contains a URL $CIRCLE_BUILD_URL\nSo does this one: $CIRCLE_BUILD_URL\nThis message contains a URL <$CIRCLE_BUILD_URL>\n<http://www.foo.com|This message *is* a link>\n<mailto:bob@example.com|Email Bob Roberts>",
+                        "emoji": true
+                      }
+                    ]
+                  }
+                ]
+              }    
 
 
 
