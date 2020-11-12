@@ -20,7 +20,7 @@ jobs:
                         "type": "section",
                         "text": {
                             "type": "mrkdwn",
-                            "text": "Failed: $CIRCLE_USERNAME's workflow (<$CIRCLE_BUILD_URL|$CIRCLE_STAGE>) in \n<https://app.circleci.com/pipelines/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME|$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME> \n - Fix back link to case (<https://github.com/HennaAbbas/test_slack/commit/$CIRCLE_SHA1|$CIRCLE_SHA1> by $CIRCLE_USERNAME) /n <$CIRCLE_BUILD_URL|$CIRCLE_JOB> job failed "
+                            "text": "Failed: $CIRCLE_USERNAME's workflow (<$CIRCLE_BUILD_URL|$CIRCLE_STAGE>) in \n<https://app.circleci.com/pipelines/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME|$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME> \n - Fix back link to case (<https://github.com/HennaAbbas/test_slack/commit/$CIRCLE_SHA1|$CIRCLE_SHA1> by $CIRCLE_USERNAME) /n<$CIRCLE_BUILD_URL|$CIRCLE_JOB> job failed "
                         }
                     }
                 ]
