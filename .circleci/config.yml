@@ -13,21 +13,18 @@ jobs:
 #           template: basic_fail_1
           event: always
           mentions: '@henna'
-          custom: |
-              {
+          custom: | 
+            {
                 "blocks": [
-                  {
-                    "type": "section",
-                    "fields": [
-                      {
-                        "type": "mrkdwn",
-                        "text": "This message contains a URL $CIRCLE_BUILD_URL\nSo does this one: $CIRCLE_BUILD_URL\nThis message contains a URL <$CIRCLE_BUILD_URL>\n<http://www.foo.com|This message *is* a link>\n<mailto:bob@example.com|Email Bob Roberts>",
-                        "emoji": true
-                      }
-                    ]
-                  }
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "This message contains a URL http://foo.com/\nSo does this one: www.foo.com\nThis message contains a URL <http://foo.com/>\n<http://www.foo.com|This message *is* a link>\n<mailto:bob@example.com|Email Bob Roberts>"
+                        }
+                    }
                 ]
-              }    
+            }              
 
 
 
