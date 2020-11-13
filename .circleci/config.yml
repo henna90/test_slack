@@ -8,7 +8,7 @@ jobs:
     docker:
       - image: circleci/node:latest
     steps:
-      - checkout
+
       - run: &setup_slack_env
           name: Prepare Slack environment
           command: |
@@ -32,7 +32,7 @@ jobs:
     docker:
       - image: circleci/node:latest
     steps:
-      - checkout
+
       - run: *setup_slack_env
       - run:
           command: |
@@ -51,7 +51,7 @@ jobs:
     - image: cimg/base:stable
 
     steps:
-    - checkout
+
     - run: *setup_slack_env
     - slack/notify:
         custom: |
