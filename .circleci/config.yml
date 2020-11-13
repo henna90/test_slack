@@ -11,10 +11,8 @@ jobs:
       - run: &setup_slack_env
           name: Prepare Slack environment
           command: |
-            message=$(git show -s --pretty='format:%s' "${CIRCLE_SHA1}" | sed 's/^/> /g' | sed -z 's/\n/\\n/g')
-            author=$(git show -s --pretty='format:%an' "${CIRCLE_SHA1}")
-            echo "export COMMIT_MESSAGE='$message'" >> $BASH_ENV
-            echo "export COMMIT_AUTHOR='$author'" >> $BASH_ENV
+            echo "export COMMIT_MESSAGE='commit message'" >> $BASH_ENV
+            echo "export COMMIT_AUTHOR='MEEEEEE'" >> $BASH_ENV
       - run:
           command: |
             exit 1
