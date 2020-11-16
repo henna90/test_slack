@@ -43,6 +43,7 @@ jobs:
     docker:
       - image: circleci/node
     steps:
+      - checkout
       - run: echo $SLACK_DEFAULT_CHANNEL
       - slack/notify:
           template: basic_fail_1
